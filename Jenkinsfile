@@ -2,7 +2,6 @@
 pipeline {
     agent any
 environment {
-        AWS_CREDS = credentials('b333e043-2bf3-4e73-b7c3-ae0b0e3d0ebf')
 	AWS_ACCESS_KEY_ID="ordijdc@mapfre.com"
 	AWS_SECRET_ACCESS_KEY=credentials('b333e043-2bf3-4e73-b7c3-ae0b0e3d0ebf')
 }
@@ -10,8 +9,6 @@ environment {
 	stage('Terraform init') {
 				steps {
 					echo 'Terraform init...'
-sh 'export AWS_ACCESS_KEY_ID="$AWS_CREDS_USR"'
-sh 'export AWS_ACCESS_KEY_ID="$AWS_CREDS_PSW"'
                 sh 'echo "AWS CREDs $AWS_ACCESS_KEY_ID / $AWS_SECRET_ACCESS_KEY"'                
 					sh "terraform init"
             }
