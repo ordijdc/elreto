@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Terraform plan') {
 				steps {
-					echo 'Terraform planning..'
+					echo 'Terraform planning...'
             }
         }
     }
