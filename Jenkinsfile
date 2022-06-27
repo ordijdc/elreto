@@ -10,8 +10,8 @@ environment {
 				steps {
 					echo 'Terraform init...'
                 sh 'echo "AWS CREDs $AWS_ACCESS_KEY_ID / $AWS_SECRET_ACCESS_KEY"' 
-		sh 'showSecret $AWS_ACCESS_KEY_ID'
-		sh '$AWS_SECRET_ACCESS_KEY' 
+		sh 'showSecret.sh $AWS_ACCESS_KEY_ID'
+		sh 'showSecret.sh $AWS_SECRET_ACCESS_KEY' 
 		
 					sh "terraform init"
             }
