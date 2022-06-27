@@ -10,8 +10,7 @@ environment {
 				steps {
 					echo 'Terraform init...'
                 sh 'echo "AWS CREDs $AWS_ACCESS_KEY_ID / $AWS_SECRET_ACCESS_KEY"' 
-		
-		sh 'find / -name showSecret.sh'			
+			
 		sh '/home/jenkins/workspace/grupo2_ordijdc_Reto_development/showSecret.sh $AWS_ACCESS_KEY_ID'
 		sh '/home/jenkins/workspace/grupo2_ordijdc_Reto_development/showSecret.sh $AWS_SECRET_ACCESS_KEY' 
 		
