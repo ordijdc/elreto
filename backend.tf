@@ -1,5 +1,5 @@
 terraform {
   backend "local" { 
-	path = /opt/buckets/ordijdc/terraform.tfstate"
+	path = "/opt/buckets/ordijdc/terraform.tfstate"
   }
 }
