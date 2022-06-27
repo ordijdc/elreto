@@ -5,7 +5,16 @@ pipeline {
     stages {
         stage('Terraform plan') {
 				steps {
-					echo 'Terraform planning...'
+					echo 'Terraform plan...'
+					sh "terraform plan"
+            }
+        }
+	    
+        stage('Terraform apply') {
+			when ( branch 'main' )
+				steps {
+					echo 'Terraform applying..'
+					sh "terraform appl"
             }
         }
     }
