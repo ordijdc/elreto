@@ -9,8 +9,10 @@ environment {
     stages {
 	stage('Terraform init') {
 				steps {
-					echo 'Terraform init...'					
-                sh 'echo "AWS CREDs $AWS_CREDS_USR / $AWS_CREDS_PSW"'                
+					echo 'Terraform init...'
+sh 'export AWS_ACCESS_KEY_ID="$AWS_CREDS_USR"'
+sh 'export AWS_ACCESS_KEY_ID="$AWS_CREDS_PSW"'
+                sh 'echo "AWS CREDs $AWS_ACCESS_KEY_ID / $AWS_SECRET_ACCESS_KEY"'                
 					sh "terraform init"
             }
         }
