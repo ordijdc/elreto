@@ -3,6 +3,12 @@ pipeline {
     agent any
 
     stages {
+	stage('Terraform init') {
+				steps {
+					echo 'Terraform init...'
+					sh "terraform init"
+            }
+        }
         stage('Terraform plan') {
 				steps {
 					echo 'Terraform plan...'
