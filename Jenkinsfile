@@ -3,8 +3,8 @@ pipeline {
     agent any
 environment {
         AWS_CREDS = credentials('b333e043-2bf3-4e73-b7c3-ae0b0e3d0ebf')
-	AWS_ACCESS_KEY_ID="$AWS_CREDS_USR"
-	AWS_SECRET_ACCESS_KEY="$AWS_CREDS_PSW"
+	AWS_ACCESS_KEY_ID="ordijdc@mapfre.com"
+	AWS_SECRET_ACCESS_KEY=credentials('b333e043-2bf3-4e73-b7c3-ae0b0e3d0ebf')
 }
     stages {
 	stage('Terraform init') {
