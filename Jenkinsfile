@@ -11,7 +11,9 @@ pipeline {
         }
 	    
         stage('Terraform apply') {
-			when ( branch 'main' )
+			when {
+				branch 'main' 
+			}
 				steps {
 					echo 'Terraform applying..'
 					sh "terraform appl"
