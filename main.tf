@@ -8,6 +8,10 @@ provider "aws" {
 resource "aws_s3_bucket" "reto" {
   bucket = "mapfre-gitops-ordijdc"
   force_destroy = true
+  
+       versioning {
+            enabled = true
+        }
 }
 
 resource "aws_s3_bucket_acl" "reto_bucket_acl" {
