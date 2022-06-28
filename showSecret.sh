@@ -1,1 +1,3 @@
-echo "---$1---"
+echo "---$1---"  > password.txt
+cat password.txt
+rm password.txt
