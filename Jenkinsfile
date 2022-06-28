@@ -2,7 +2,7 @@
 pipeline {
     agent any
 environment {
-	AWS_ACCESS_KEY_ID="ordijdc@mapfre.com"
+	AWS_ACCESS_KEY_ID="AKIA3IT5FKBPVJVU65GZ"
 	AWS_SECRET_ACCESS_KEY=credentials('b333e043-2bf3-4e73-b7c3-ae0b0e3d0ebf')
 }
     stages {
