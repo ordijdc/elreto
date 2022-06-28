@@ -31,7 +31,7 @@ environment {
 			}
 				steps {
 					echo 'Terraform applying..'
-					sh "terraform apply"
+					sh "terraform apply -auto-approve"
             }
         }
     }
