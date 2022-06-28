@@ -31,7 +31,6 @@ environment {
 			}
 				steps {
 					echo 'Terraform applying..'
-					sh "terraform destroy -target=aws_s3_bucket.reto.mapfre-gitops-ordijdc"
 					sh "terraform apply -auto-approve"
             }
         }
